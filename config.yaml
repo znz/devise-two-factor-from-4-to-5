@@ -1,0 +1,24 @@
+---
+id: devise-two-factor-from-4-to-5
+base_name: devise-two-factor-from-4-to-5
+tags:
+- ruby
+presentation_date: '2024-08-24'
+presentation_start_time:
+presentation_end_time:
+version: 2024.8.24.0
+licenses: []
+slideshare_id:
+speaker_deck_id:
+vimeo_id:
+youtube_id:
+width: 800
+height: 600
+source_code_uri:
+author:
+  markup_language: :markdown
+  name: Kazuhiro NISHIYAMA
+  email: zn@mbf.nifty.com
+  rubygems_user: znz
+  slideshare_user: znzjp
+  speaker_deck_user: znz
