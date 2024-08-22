@@ -23,7 +23,7 @@ allotted-time
 - 株式会社Ruby開発
   www.ruby-dev.jp
 
-# devise-two-fatcor とは?
+# devise-two-factor とは?
 
 - devise を TOTP の2要素認証に対応するのに使う gem
 - ユーザごとに以下のデータを保存
