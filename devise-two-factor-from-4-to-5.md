@@ -47,10 +47,20 @@ allotted-time
 - 5 は Rails 7+ 標準の encrypted attribute
   - 暗号化したものを Base64 して JSON で `otp_secret` 1カラムに保存
 
-# 問題点
+# 更新手順
 
 - 4 から 5 は Rails 6 から Rails 7 と同時に上げる必要あり
-  - [UPGRADING.md](https://github.com/devise-two-factor/devise-two-factor/blob/main/UPGRADING.md) に手順あり
+  - <https://github.com/devise-two-factor/devise-two-factor/blob/main/UPGRADING.md> に手順あり
+- ほとんど gem は複数の Rails に対応していて独立して更新可能
+  - 今回はそうなっていない
+
+# なぜか? (推測)
+
+- `attr_encrypted` gem と Rails 7 で `#encrypted_attributes` メソッドが衝突する
+- Rails 7 対応の `attr_encrypted` に更新すると二度手間だから一気に移行する手順になっている?
+
+# 問題点
+
 - 実運用環境なら Rails 7 に上げた後に Rails 6 に戻す可能性もあるのでは?
   - UPGRADING.md には戻す手順はない → 独自対応が必要
 
@@ -81,3 +91,9 @@ allotted-time
 - 手動でダウングレード確認も必須
 - その他の対応も場合分けして用意
   - 例: ダウングレード中に `encrypted_*` だけが更新されて `otp_secret` が古くなる → `otp_secret` を nil に戻すタスク
+
+# 宣伝
+
+- 福岡Rubyist会議04 <https://regional.rubykaigi.org/fukuoka04/>
+  - 2024.09.07 Sat. 9:30–18:00
+  - 主催: Fukuoka.rb / 株式会社Ruby開発
