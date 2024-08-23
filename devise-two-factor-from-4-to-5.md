@@ -62,6 +62,8 @@ allotted-time
 # 問題点
 
 - 実運用環境なら Rails 7 に上げた後に Rails 6 に戻す可能性もあるのでは?
+  - Rails 7 でユーザーの認証アプリと `otp_secret` だけが更新
+    → このまま Rails 6 に戻すと `encrypted_*` が古くて認証失敗
   - UPGRADING.md には戻す手順はない → 独自対応が必要
 
 # 具体的には
