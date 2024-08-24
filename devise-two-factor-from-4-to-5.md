@@ -99,3 +99,5 @@ allotted-time
 - 福岡Rubyist会議04 <https://regional.rubykaigi.org/fukuoka04/>
   - 2024.09.07 Sat. 9:30–18:00
   - 主催: Fukuoka.rb / 株式会社Ruby開発
+
+![](fukuokark04.png){:relative_height='100'}
